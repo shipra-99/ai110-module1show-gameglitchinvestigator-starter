@@ -25,13 +25,29 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- The game lets a user guess a randomly generated number within a given range. The range and number of attempts change based on the selected difficulty level. After each guess, the game gives a hint to guide the player. The game also calculates a score based on how well the player performs.
+
+- Several issues were discovered during testing:
+
+Incorrect hint direction (higher/lower messages were reversed).
+Secret number comparison bug caused by inconsistent data types.
+Input validation missing, allowing guesses outside the valid range.
+Incorrect UI message showing the wrong guessing range.
+
+- Fixes Applied
+
+• Corrected comparison logic in check_guess()
+• Ensured the secret number always remains an integer
+• Added range validation in parse_guess()
+• Refactored logic into logic_utils.py
+• Updated UI text to display the correct range
+• Verified functionality using pytest
 
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
+![alt text](<Screenshot 2026-03-08 at 12.39.19 AM.png>)
+![alt text](<Screenshot 2026-03-08 at 12.40.37 AM.png>)
+![alt text](<Screenshot 2026-03-08 at 12.35.59 AM.png>)
 
 ## 🚀 Stretch Features
 
